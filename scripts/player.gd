@@ -7,7 +7,7 @@ extends CharacterBody2D
 @export var friction = 15
 @export var coyote = 0.1
 @export var pre_jump = 0.1
-@export var jump_cancel_speed = 3
+@export var jump_cancel_speed = 2
 
 var last_jump = 100
 var last_ground = 100
