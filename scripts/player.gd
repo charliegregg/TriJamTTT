@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 @export var GRAVITY = 980
 
-@export var speed = 4500
+@export var speed = 7000
 @export var jump_height = 300
 @export var friction = 15
 @export var coyote = 0.1
@@ -36,7 +36,12 @@ func _physics_process(delta):
 	velocity += inp * speed * delta / 2
 	velocity.x *= exp(-friction * delta)
 	
+	if position.y > 2000:
+		die()
+	
 	
 	if Input.is_action_just_pressed("ui_cancel"):
 		get_tree().quit()
 	
+func die():
+	get_tree().reload_current_scene()
