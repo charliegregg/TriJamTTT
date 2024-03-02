@@ -1,0 +1,33 @@
+[gd_scene load_steps=6 format=3 uid="uid://hp1n4wobjp78"]
+
+[ext_resource type="PackedScene" uid="uid://dggrmokvyx76q" path="res://scenes/player.tscn" id="1_3tt1y"]
+[ext_resource type="Script" path="res://addons/rmsmartshape/shapes/shape_closed.gd" id="2_wm0yg"]
+[ext_resource type="Resource" uid="uid://clul4g6yglxpq" path="res://resources/level_part_a.tres" id="3_au6t4"]
+[ext_resource type="Resource" uid="uid://dgm7r123xc308" path="res://resources/level_material.tres" id="4_5jsnn"]
+[ext_resource type="PackedScene" uid="uid://cinvqmjretrfh" path="res://scenes/cam.tscn" id="5_maiwo"]
+
+[node name="level1" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_3tt1y")]
+
+[node name="LeftLevel" type="StaticBody2D" parent="."]
+
+[node name="LeftLevel" type="Node2D" parent="LeftLevel"]
+texture_filter = 1
+texture_repeat = 2
+scale = Vector2(2, 2)
+script = ExtResource("2_wm0yg")
+_points = ExtResource("3_au6t4")
+shape_material = ExtResource("4_5jsnn")
+collision_polygon_node_path = NodePath("../CollisionPolygon2D")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="LeftLevel"]
+visible = false
+modulate = Color(1, 1, 1, 0.3)
+polygon = PackedVector2Array(-346.865, 379.929, 1118.12, 381.24, 1472.68, 363.143, 2103.38, 378.719, 2221.5, 396.742, 2306.78, 416.628, 2369.73, 437.615, 2470.8, 479.849, 2529.96, 499.573, 2608.93, 517.354, 2718.22, 532.431, 2830.06, 540.377, 2914.59, 538.64, 2979.21, 529.26, 3031.32, 514.282, 3127.57, 475.69, 3186.5, 456.159, 3262.5, 439.195, 3305.64, 434.54, 3348.12, 435.126, 3390.08, 440.278, 3431.64, 449.319, 3514.08, 476.374, 3596.44, 510.891, 3764.99, 580.711, 3853.2, 605.216, 3898.73, 612.505, 3945.38, 615.583, 4060.82, 607.205, 4208.39, 582.625, 4541.33, 506.213, 4948.28, 393.839, 5473.39, 210.996, 5603.58, 168.889, 5751.26, 135.654, 6016.4, 94.2533, 6294.65, 75.5046, 6446.56, 81.7071, 6513.13, 91.7789, 6542.5, 98.9418, 6568.65, 107.668, 6594.88, 119.692, 6624.34, 136.186, 6690.23, 179.693, 6830.84, 288.506, 6995.45, 431.158, 7318.56, 794.785, 7382.52, 857.68, 7432.14, 898.893, 7637.04, 1072.94, 7762, 1170.72, 7827.12, 1211.5, 7892.86, 1242.75, 7961.78, 1265.95, 8035.46, 1284.95, 8187.53, 1312.04, 8444.02, 1334.66, 8761.4, 1332.73, 8951.75, 1320.27, 9104.22, 1296.86, 9734.65, 1163.08, 10438.8, 986.921, 11154.7, 853.099, 11217.9, 2894.19, -341.082, 2936.57)
+
+[node name="CamAnch" type="Node2D" parent="."]
+position = Vector2(449, -156)
+
+[node name="Cam" parent="CamAnch" node_paths=PackedStringArray("player") instance=ExtResource("5_maiwo")]
+player = NodePath("../../Player")
