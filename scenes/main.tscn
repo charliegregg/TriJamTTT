@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://b73fscpj3o4hg"]
+
+[ext_resource type="PackedScene" uid="uid://f7564uveotpy" path="res://scenes/platform.tscn" id="1_hybmo"]
+[ext_resource type="PackedScene" uid="uid://dggrmokvyx76q" path="res://scenes/player.tscn" id="2_p316p"]
+
+[node name="Main" type="Node2D"]
+
+[node name="Platform" parent="." instance=ExtResource("1_hybmo")]
+position = Vector2(253, 794)
+
+[node name="Platform2" parent="." instance=ExtResource("1_hybmo")]
+position = Vector2(878, 796)
+
+[node name="Platform3" parent="." instance=ExtResource("1_hybmo")]
+position = Vector2(1437, 706)
+
+[node name="Player" parent="." instance=ExtResource("2_p316p")]
+position = Vector2(260, 216)
