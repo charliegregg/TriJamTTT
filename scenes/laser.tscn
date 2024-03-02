@@ -1,0 +1,61 @@
+[gd_scene load_steps=8 format=3 uid="uid://d6j64as3f14u"]
+
+[ext_resource type="Script" path="res://scripts/laser.gd" id="1_7wu1f"]
+[ext_resource type="Texture2D" uid="uid://cl1tidara4oel" path="res://icon.svg" id="1_uxs28"]
+
+[sub_resource type="Gradient" id="Gradient_76n7o"]
+offsets = PackedFloat32Array(0, 0.2, 0.3, 0.5, 0.7, 0.8, 1)
+colors = PackedColorArray(1, 0, 0, 0, 1, 0, 0, 1, 1, 0.392157, 0.392157, 1, 1, 1, 1, 1, 1, 0.392157, 0.392157, 1, 1, 0, 0, 1, 1, 0, 0, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_dnsxs"]
+gradient = SubResource("Gradient_76n7o")
+width = 32
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gfwjv"]
+size = Vector2(32, 1)
+
+[sub_resource type="Gradient" id="Gradient_m2alo"]
+offsets = PackedFloat32Array(0.215278, 0.517361, 0.642361, 1)
+colors = PackedColorArray(1, 1, 1, 1, 1, 0.392157, 0.392157, 1, 1, 0, 0, 1, 1, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ud2h7"]
+gradient = SubResource("Gradient_m2alo")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.5, 0)
+
+[node name="laser" type="Node2D"]
+script = ExtResource("1_7wu1f")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_uxs28")
+
+[node name="Beam" type="Node2D" parent="."]
+z_index = -2
+scale = Vector2(1, 100)
+
+[node name="Sprite2D" type="Sprite2D" parent="Beam"]
+position = Vector2(0, -0.5)
+texture = SubResource("GradientTexture1D_dnsxs")
+
+[node name="Area2D" type="Area2D" parent="Beam"]
+position = Vector2(0, -0.5)
+collision_layer = 0
+collision_mask = 6
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Beam/Area2D"]
+shape = SubResource("RectangleShape2D_gfwjv")
+
+[node name="RayCast2D" type="RayCast2D" parent="Beam"]
+unique_name_in_owner = true
+scale = Vector2(1, 0.01)
+target_position = Vector2(0, -1024)
+
+[node name="EndSprite" type="Sprite2D" parent="."]
+z_index = -1
+rotation = 3.14159
+scale = Vector2(0.8, 0.8)
+texture = SubResource("GradientTexture2D_ud2h7")
+
+[connection signal="body_entered" from="Beam/Area2D" to="." method="_on_area_2d_body_entered"]

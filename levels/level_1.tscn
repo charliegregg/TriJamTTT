@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://djkmil5t0ismp"]
+[gd_scene load_steps=5 format=3 uid="uid://djkmil5t0ismp"]
 
 [ext_resource type="PackedScene" uid="uid://dugyht4vx4s4h" path="res://levels/level.tscn" id="1_7ei7c"]
 [ext_resource type="PackedScene" uid="uid://cqyec3w3k7i01" path="res://scenes/coin.tscn" id="2_c4b7e"]
 [ext_resource type="PackedScene" uid="uid://cdi24c03fch2a" path="res://scenes/semiplatform.tscn" id="3_ctlo4"]
+[ext_resource type="PackedScene" uid="uid://d6j64as3f14u" path="res://scenes/laser.tscn" id="4_sx1ux"]
 
 [node name="level1" instance=ExtResource("1_7ei7c")]
 
@@ -17,3 +18,7 @@ position = Vector2(424, -230)
 
 [node name="SemiPlatform" parent="." index="10" instance=ExtResource("3_ctlo4")]
 position = Vector2(55, -203)
+
+[node name="laser" parent="." index="11" instance=ExtResource("4_sx1ux")]
+position = Vector2(1267, 35)
+rotation = -1.57162
