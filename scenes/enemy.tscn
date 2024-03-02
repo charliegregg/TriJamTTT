@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://d1f31r6p2o64i"]
+[gd_scene load_steps=6 format=3 uid="uid://d1f31r6p2o64i"]
 
 [ext_resource type="Script" path="res://scripts/enemy.gd" id="1_0j4s5"]
 [ext_resource type="Texture2D" uid="uid://cl1tidara4oel" path="res://icon.svg" id="1_sd5mt"]
@@ -8,8 +8,12 @@ size = Vector2(128, 128)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tqpe5"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tji6n"]
+size = Vector2(128, 128)
+
 [node name="enemy" type="CharacterBody2D"]
 scale = Vector2(0.4, 0.4)
+collision_layer = 2
 floor_max_angle = 0.523599
 script = ExtResource("1_0j4s5")
 
@@ -27,6 +31,13 @@ position = Vector2(-80, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LeftArea"]
 shape = SubResource("RectangleShape2D_tqpe5")
+
+[node name="HitBox" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
+shape = SubResource("RectangleShape2D_tji6n")
 
 [node name="LeftArea2" type="Area2D" parent="."]
 position = Vector2(-80, 64)
@@ -47,3 +58,4 @@ position = Vector2(80, 64)
 shape = SubResource("RectangleShape2D_tqpe5")
 
 [connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
+[connection signal="body_entered" from="HitBox" to="." method="_on_hit_box_body_entered"]

@@ -33,15 +33,24 @@ func _physics_process(delta):
 		inp = -1
 	
 func die():
-	hide()
+	$Sprite2D.hide()
 	$CollisionShape2D.disabled = true
 	alive = false
 	velocity = Vector2.ZERO
 	
 func revive():
-	show()
+	$Sprite2D.show()
 	$CollisionShape2D.disabled = false
 	alive = true
 
 func _on_visible_on_screen_notifier_2d_screen_exited():
 	revive()
+
+
+func _on_hit_box_body_entered(body):
+	if body is Player:
+		if body.velocity.y > 0:
+			die()
+			body.bounce()
+		else:
+			body.die()

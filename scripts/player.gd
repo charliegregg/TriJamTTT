@@ -46,3 +46,5 @@ func _physics_process(delta):
 	
 func die():
 	get_tree().reload_current_scene()
+func bounce():
+	velocity.y = -sqrt(3 * GRAVITY * jump_height)
