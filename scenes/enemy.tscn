@@ -1,0 +1,49 @@
+[gd_scene load_steps=5 format=3 uid="uid://d1f31r6p2o64i"]
+
+[ext_resource type="Script" path="res://scripts/enemy.gd" id="1_0j4s5"]
+[ext_resource type="Texture2D" uid="uid://cl1tidara4oel" path="res://icon.svg" id="1_sd5mt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hunns"]
+size = Vector2(128, 128)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tqpe5"]
+
+[node name="enemy" type="CharacterBody2D"]
+scale = Vector2(0.4, 0.4)
+floor_max_angle = 0.523599
+script = ExtResource("1_0j4s5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_hunns")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_sd5mt")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+rect = Rect2(-64, -64, 128, 128)
+
+[node name="LeftArea" type="Area2D" parent="."]
+position = Vector2(-80, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LeftArea"]
+shape = SubResource("RectangleShape2D_tqpe5")
+
+[node name="LeftArea2" type="Area2D" parent="."]
+position = Vector2(-80, 64)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LeftArea2"]
+shape = SubResource("RectangleShape2D_tqpe5")
+
+[node name="RightArea" type="Area2D" parent="."]
+position = Vector2(80, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RightArea"]
+shape = SubResource("RectangleShape2D_tqpe5")
+
+[node name="RightArea2" type="Area2D" parent="."]
+position = Vector2(80, 64)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RightArea2"]
+shape = SubResource("RectangleShape2D_tqpe5")
+
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

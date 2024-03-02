@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://hp1n4wobjp78"]
+[gd_scene load_steps=10 format=3 uid="uid://hp1n4wobjp78"]
 
 [ext_resource type="PackedScene" uid="uid://dggrmokvyx76q" path="res://scenes/player.tscn" id="1_3tt1y"]
 [ext_resource type="Script" path="res://addons/rmsmartshape/shapes/shape_closed.gd" id="2_wm0yg"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://caw6cp4vbqnkq" path="res://scenes/flag.tscn" id="6_dmcm7"]
 [ext_resource type="PackedScene" uid="uid://b73fscpj3o4hg" path="res://scenes/main.tscn" id="7_4fk38"]
 [ext_resource type="PackedScene" uid="uid://f7564uveotpy" path="res://scenes/platform.tscn" id="8_ojom1"]
+[ext_resource type="PackedScene" uid="uid://d1f31r6p2o64i" path="res://scenes/enemy.tscn" id="9_xpeco"]
 
 [node name="level1" type="Node2D"]
 
@@ -43,3 +44,6 @@ position = Vector2(240, 84)
 
 [node name="Platform2" parent="." instance=ExtResource("8_ojom1")]
 position = Vector2(715, 57)
+
+[node name="enemy" parent="." instance=ExtResource("9_xpeco")]
+position = Vector2(707, -35)
