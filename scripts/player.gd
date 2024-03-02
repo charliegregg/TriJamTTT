@@ -25,7 +25,7 @@ func _physics_process(delta):
 		last_ground = 0
 	if (is_on_floor() or last_ground < coyote) and last_jump < pre_jump:
 		last_ground = 1
-		coyote = 1
+		last_jump = 1
 		velocity.y = -sqrt(2 * GRAVITY * jump_height)
 	else:
 		velocity.y += GRAVITY * delta * (1 if fake_jump else jump_cancel_speed)
