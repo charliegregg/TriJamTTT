@@ -34,13 +34,13 @@ func _physics_process(delta):
 	
 func die():
 	$Sprite2D.hide()
-	$CollisionShape2D.disabled = true
+	$HitBox.collision_mask = 0
 	alive = false
 	velocity = Vector2.ZERO
 	
 func revive():
 	$Sprite2D.show()
-	$CollisionShape2D.disabled = false
+	$HitBox.collision_mask = 4
 	alive = true
 
 func _on_visible_on_screen_notifier_2d_screen_exited():
