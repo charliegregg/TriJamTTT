@@ -2,9 +2,9 @@ extends CharacterBody2D
 
 @export var GRAVITY = 980
 
-@export var speed = 450
+@export var speed = 4500
 @export var jump_height = 300
-@export var friction = 0.7
+@export var friction = 15
 @export var coyote = 0.1
 @export var pre_jump = 0.1
 
@@ -22,7 +22,8 @@ func _physics_process(delta):
 	if is_on_floor():
 		last_ground = 0
 	if (is_on_floor() or last_ground < coyote) and last_jump < pre_jump:
-		last_ground = 0
+		last_ground = 1
+		coyote = 1
 		velocity.y = -sqrt(2 * GRAVITY * jump_height)
 	else:
 		velocity.y += GRAVITY * delta
@@ -31,7 +32,7 @@ func _physics_process(delta):
 	velocity += inp * speed * delta / 2
 	move_and_slide()
 	velocity += inp * speed * delta / 2
-	velocity *= exp(-friction * delta)
+	velocity.x *= exp(-friction * delta)
 	
 	
 	if Input.is_action_just_pressed("ui_cancel"):
