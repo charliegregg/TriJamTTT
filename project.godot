@@ -57,3 +57,7 @@ move_down={
 2d_physics/layer_1="walls"
 2d_physics/layer_2="enemy"
 2d_physics/layer_3="player"
+
+[rendering]
+
+renderer/rendering_method="gl_compatibility"

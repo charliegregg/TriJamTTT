@@ -13,25 +13,34 @@ class_name Player
 var last_jump = 100
 var last_ground = 100
 
+var alive = true
+
 func _ready():
-	pass
+	$DeathAnimation.play("RESET")
 	
 func _physics_process(delta):
-	last_jump += delta
-	last_ground += delta
-	if Input.is_action_just_pressed("move_jump"):
-		last_jump = 0
-	var fake_jump = Input.is_action_pressed("move_jump") and velocity.y < 0
-	if is_on_floor():
-		last_ground = 0
-	if (is_on_floor() or last_ground < coyote) and last_jump < pre_jump:
-		last_ground = 1
-		last_jump = 1
-		velocity.y = -sqrt(2 * GRAVITY * jump_height)
+	var inp = Vector2.ZERO
+	if Input.is_action_just_pressed("ui_cancel"):
+		get_tree().quit()
+	if alive: 
+		last_jump += delta
+		last_ground += delta
+		if Input.is_action_just_pressed("move_jump"):
+			last_jump = 0
+		var fake_jump = Input.is_action_pressed("move_jump") and velocity.y < 0
+		if is_on_floor():
+			last_ground = 0
+		if (is_on_floor() or last_ground < coyote) and last_jump < pre_jump:
+			last_ground = 1
+			last_jump = 1
+			velocity.y = -sqrt(2 * GRAVITY * jump_height)
+		else:
+			velocity.y += GRAVITY * delta * (1 if fake_jump else jump_cancel_speed)
+			
+		inp = Vector2(Input.get_axis("move_left", "move_right"), 0)
 	else:
-		velocity.y += GRAVITY * delta * (1 if fake_jump else jump_cancel_speed)
+		velocity.y += GRAVITY * delta
 		
-	var inp = Vector2(Input.get_axis("move_left", "move_right"), 0)
 	velocity += inp * speed * delta / 2
 	move_and_slide()
 	velocity += inp * speed * delta / 2
@@ -41,11 +50,15 @@ func _physics_process(delta):
 		die()
 	
 	
-	if Input.is_action_just_pressed("ui_cancel"):
-		get_tree().quit()
-	
 func die():
-	Globals.load_coins()
-	get_tree().reload_current_scene()
+	$DeathTimer.start()
+	$DeathAnimation.play("die")
+	alive = false
+	$CollisionShape2D.disabled = true
 func bounce():
 	velocity.y = -sqrt(3 * GRAVITY * jump_height)
+
+
+func _on_death_timer_timeout():
+	Globals.load_coins()
+	get_tree().reload_current_scene()
