@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://dnnap3h65qn7s"]
+
+[ext_resource type="Script" path="res://scenes/Music.gd" id="1_vhvk2"]
+[ext_resource type="AudioStream" uid="uid://b0stg6jgg33rc" path="res://SFX/Chiptune Vol3 Journey Main.wav" id="2_73if3"]
+
+[node name="Music" type="Node"]
+script = ExtResource("1_vhvk2")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_73if3")
+volume_db = -9.369
+autoplay = true
+
+[connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]

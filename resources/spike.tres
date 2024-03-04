@@ -1,12 +1,12 @@
 [gd_resource type="Resource" script_class="SS2D_Material_Edge" load_steps=4 format=3 uid="uid://bd1s57kir31s"]
 
 [ext_resource type="Script" path="res://addons/rmsmartshape/materials/edge_material.gd" id="1_es7s2"]
-[ext_resource type="Texture2D" uid="uid://bljxc3ordnqpd" path="res://resources/grass_top_spikes.png" id="2_r3khv"]
+[ext_resource type="Texture2D" uid="uid://drws0vxbqp16o" path="res://resources/grass_top.png" id="2_1iap8"]
 [ext_resource type="Texture2D" uid="uid://k5mr0fkv3rrq" path="res://resources/grass_corner.png" id="3_diqcm"]
 
 [resource]
 script = ExtResource("1_es7s2")
-textures = Array[Texture2D]([ExtResource("2_r3khv")])
+textures = Array[Texture2D]([ExtResource("2_1iap8")])
 textures_corner_outer = Array[Texture2D]([ExtResource("3_diqcm")])
 textures_corner_inner = Array[Texture2D]([])
 textures_taper_left = Array[Texture2D]([])

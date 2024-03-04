@@ -97,7 +97,7 @@ wait_time = 1.5
 one_shot = true
 
 [node name="FireTimer" type="Timer" parent="."]
-wait_time = 2.0
+wait_time = 1.5
 one_shot = true
 
 [connection signal="body_entered" from="Beam/Area2D" to="." method="_on_area_2d_body_entered"]

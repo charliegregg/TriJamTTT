@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=3 uid="uid://dggrmokvyx76q"]
+[gd_scene load_steps=41 format=3 uid="uid://dggrmokvyx76q"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_otn8r"]
 [ext_resource type="Texture2D" uid="uid://bnvvq2gru844" path="res://resources/player.png" id="2_qcuw8"]
@@ -20,6 +20,7 @@
 [ext_resource type="AudioStream" uid="uid://cbuk175g0yrxl" path="res://SFX/Movement/Grass/Shoe Step Grass Hard C.wav" id="18_7fggq"]
 [ext_resource type="AudioStream" uid="uid://df13hmrxol01o" path="res://SFX/Movement/Grass/Shoe Step Grass Hard D.wav" id="19_xrahd"]
 [ext_resource type="AudioStream" uid="uid://dq106r54sqr7p" path="res://SFX/Movement/Grass/Shoe Step Grass Hard E.wav" id="20_ccqfc"]
+[ext_resource type="AudioStream" uid="uid://dju0hday47ymn" path="res://SFX/Casual Glass.wav" id="21_4yy4u"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_38epf"]
 size = Vector2(128, 128)
@@ -166,6 +167,11 @@ stream_3/weight = 1.0
 stream_4/stream = ExtResource("20_ccqfc")
 stream_4/weight = 1.0
 
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_10caa"]
+streams_count = 1
+stream_0/stream = ExtResource("21_4yy4u")
+stream_0/weight = 1.0
+
 [node name="Player" type="CharacterBody2D"]
 z_index = 1
 scale = Vector2(0.5, 0.5)
@@ -214,6 +220,10 @@ volume_db = 10.0
 [node name="StepTimer" type="Timer" parent="."]
 wait_time = 0.4
 autostart = true
+
+[node name="CoinSound" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamRandomizer_10caa")
+max_polyphony = 10
 
 [connection signal="timeout" from="DeathTimer" to="." method="_on_death_timer_timeout"]
 [connection signal="timeout" from="StepTimer" to="." method="on_running_finished"]

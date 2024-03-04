@@ -1,25 +1,24 @@
-[gd_scene load_steps=4 format=3 uid="uid://bw0egdh023qii"]
+[gd_scene load_steps=5 format=3 uid="uid://bw0egdh023qii"]
 
 [ext_resource type="PackedScene" uid="uid://dugyht4vx4s4h" path="res://levels/level.tscn" id="1_4uekh"]
 [ext_resource type="PackedScene" uid="uid://basevxw3qfpgi" path="res://levels/level4.tscn" id="2_e73bh"]
 [ext_resource type="PackedScene" uid="uid://d6j64as3f14u" path="res://scenes/laser.tscn" id="3_c6fks"]
+[ext_resource type="PackedScene" uid="uid://f7564uveotpy" path="res://scenes/platform.tscn" id="4_pcplg"]
 
 [node name="level" instance=ExtResource("1_4uekh")]
 
-[node name="CollisionPolygon2D" parent="Level" index="1"]
-polygon = PackedVector2Array(-173.432, 189.965, 559.058, 190.62, 736.342, 181.571, 1051.69, 189.359, 1110.75, 198.371, 1153.39, 208.313, 1184.87, 218.807, 1235.4, 239.925, 1264.98, 249.787, 1304.47, 258.678, 1359.11, 266.216, 1415.03, 270.189, 1457.3, 269.32, 1489.61, 264.63, 1515.66, 257.141, 1563.78, 237.845, 1593.25, 228.079, 1631.25, 219.597, 1652.82, 217.27, 1674.06, 217.563, 1695.04, 220.138, 1715.82, 224.659, 1757.04, 238.187, 1798.22, 255.445, 1882.5, 290.355, 1926.6, 302.608, 1949.37, 306.253, 1972.69, 307.792, 2030.41, 303.603, 2104.2, 291.313, 2270.67, 253.106, 2474.14, 196.92, 2736.7, 105.498, 2801.79, 84.4446, 2875.63, 67.827, 3008.2, 47.1266, 3147.32, 37.7523, 3223.28, 40.8535, 3256.56, 45.8894, 3271.24, 49.4709, 3284.32, 53.8341, 3297.44, 59.846, 3312.17, 68.0931, 3345.11, 89.8464, 3415.42, 144.253, 3497.73, 215.579, 3659.28, 397.392, 3691.26, 428.84, 3716.07, 449.446, 3818.52, 536.471, 3881, 585.362, 3913.56, 605.749, 3946.43, 621.373, 3980.89, 632.977, 4017.73, 642.476, 4093.77, 656.019, 4222.01, 667.33, 4380.7, 666.367, 4475.87, 660.135, 4552.11, 648.432, 4867.33, 581.541, 4971.82, 543.394, 5083.9, 513.852, 5219.42, 493.46, 5545.92, 484.945, 5534.44, 2470.78, -179.521, 2465.03)
-
-[node name="CollisionPolygon2D2" parent="Level" index="3"]
-polygon = PackedVector2Array(6509.22, 501.097, 6703.61, 503.801, 6892.68, 489.48, 6994.49, 473.289, 7095.19, 449.126, 7190.37, 416.485, 7279.38, 375.683, 7363.33, 326.484, 7443.36, 268.652, 7520.58, 201.951, 7596.11, 126.146, 7746.6, -53.7204, 7782.72, -95.6102, 7812.1, -138.424, 7835.66, -181.979, 7854.27, -226.09, 7880.2, -315.245, 7931.85, -576.906, 7945.98, -617.736, 7964.06, -657.28, 7986.99, -695.355, 8015.65, -731.776, 8033.59, -749.216, 8055.42, -766.01, 8080.89, -782.162, 8109.75, -797.677, 8176.62, -826.815, 8254.02, -853.467, 8628.69, -935.995, 9010.77, -981.93, 9271.42, -993.843, 9344.89, -987.624, 9409.48, -973.831, 9466.97, -953.398, 9519.12, -927.258, 9567.68, -896.345, 9614.43, -861.593, 9709.54, -784.305, 9715.62, -779.008, 9721.4, -773.203, 9732.1, -760.114, 9741.75, -745.137, 9750.42, -728.372, 9765.24, -689.869, 9777.27, -645.394, 9860.79, -169.42, 9880.57, -106.748, 9904.87, -46.0045, 9934.39, 12.0224, 9969.88, 66.5417, 10048.2, 163.789, 10128.8, 246.606, 10212.3, 316.622, 10299.3, 375.463, 10390.3, 424.758, 10486.1, 466.136, 10694.4, 531.65, 10803, 555.845, 10908.4, 571.54, 11011, 579.316, 11111, 579.75, 11304.5, 560.913, 11491.5, 519.663, 11673.6, 457.394, 11842.9, 375.558, 11919.2, 328.777, 11987.9, 278.872, 12047.6, 226.436, 12096.8, 172.057, 12486.4, -397.3, 12508.6, -437.994, 12527.8, -480.15, 12557.7, -566.591, 12578, -652.113, 12590.4, -732.203, 12599.3, -858.041, 12598.9, -908.105, 12989.8, -924.704, 13703.1, -924.808, 13667.2, 2442.57, 6451.11, 2472.45)
-
 [node name="title_card" parent="CamAnch/Cam/Control" index="2"]
 text = "There's too many lasers"
+level_name = "lasers"
 
 [node name="flag" parent="." index="3"]
 next_level = ExtResource("2_e73bh")
 
+[node name="Platform5" parent="." index="38"]
+position = Vector2(3963, 305)
+
 [node name="laser9" parent="." index="53" instance=ExtResource("3_c6fks")]
-position = Vector2(1551, -812)
+position = Vector2(1484, -812)
 rotation = 3.14159
 cycle = 9.0
 start = 0.0
@@ -31,138 +30,173 @@ rotation = 3.14159
 cycle = 9.0
 
 [node name="laser11" parent="." index="55" instance=ExtResource("3_c6fks")]
-position = Vector2(1674, -812)
+position = Vector2(1747, -811)
 rotation = 3.14159
 cycle = 9.0
 start = 6.0
 end = 9.0
 
 [node name="laser12" parent="." index="56" instance=ExtResource("3_c6fks")]
-position = Vector2(2002, -795)
+position = Vector2(1911, -811)
 rotation = 3.14159
 cycle = 9.0
 start = 0.0
 end = 3.0
 
 [node name="laser13" parent="." index="57" instance=ExtResource("3_c6fks")]
-position = Vector2(2064, -795)
+position = Vector2(2065, -812)
 rotation = 3.14159
 cycle = 9.0
 
 [node name="laser14" parent="." index="58" instance=ExtResource("3_c6fks")]
-position = Vector2(2125, -795)
+position = Vector2(2214, -812)
 rotation = 3.14159
 cycle = 9.0
 start = 6.0
 end = 9.0
 
-[node name="laser15" parent="." index="59" instance=ExtResource("3_c6fks")]
-position = Vector2(4437, -1020)
-rotation = 3.14159
-cycle = 9.0
-start = 0.0
-end = 3.0
-
-[node name="laser16" parent="." index="60" instance=ExtResource("3_c6fks")]
-position = Vector2(4499, -1020)
-rotation = 3.14159
-cycle = 9.0
-
-[node name="laser17" parent="." index="61" instance=ExtResource("3_c6fks")]
-position = Vector2(4560, -1020)
-rotation = 3.14159
-cycle = 9.0
-start = 6.0
-end = 9.0
-
-[node name="laser22" parent="." index="62" instance=ExtResource("3_c6fks")]
-position = Vector2(4901, 298)
+[node name="laser22" parent="." index="59" instance=ExtResource("3_c6fks")]
+position = Vector2(4760, 358)
 rotation = 3.64006
 cycle = 9.0
 start = 0.0
 end = 3.0
 
-[node name="laser23" parent="." index="63" instance=ExtResource("3_c6fks")]
-position = Vector2(4963, 298)
+[node name="laser23" parent="." index="60" instance=ExtResource("3_c6fks")]
+position = Vector2(4930, 356)
 rotation = 3.64006
 cycle = 9.0
 
-[node name="laser24" parent="." index="64" instance=ExtResource("3_c6fks")]
-position = Vector2(5024, 298)
+[node name="laser24" parent="." index="61" instance=ExtResource("3_c6fks")]
+position = Vector2(5119, 356)
 rotation = 3.64006
 cycle = 9.0
 start = 6.0
 end = 9.0
 
-[node name="laser18" parent="." index="65" instance=ExtResource("3_c6fks")]
-position = Vector2(6633, -1286)
+[node name="laser18" parent="." index="62" instance=ExtResource("3_c6fks")]
+position = Vector2(6380, -620)
 rotation = 3.14159
 cycle = 9.0
 start = 0.0
 end = 3.0
 
-[node name="laser19" parent="." index="66" instance=ExtResource("3_c6fks")]
-position = Vector2(6695, -1286)
+[node name="laser19" parent="." index="63" instance=ExtResource("3_c6fks")]
+position = Vector2(5658, -117)
 rotation = 3.14159
 cycle = 9.0
 
-[node name="laser20" parent="." index="67" instance=ExtResource("3_c6fks")]
-position = Vector2(6756, -1286)
+[node name="laser20" parent="." index="64" instance=ExtResource("3_c6fks")]
+position = Vector2(7490, -1336)
 rotation = 3.14159
 cycle = 9.0
 start = 6.0
 end = 9.0
 
-[node name="laser21" parent="." index="68" instance=ExtResource("3_c6fks")]
-position = Vector2(8584, -1666)
+[node name="laser21" parent="." index="65" instance=ExtResource("3_c6fks")]
+position = Vector2(8416, -1698)
 rotation = 3.14159
 cycle = 9.0
 start = 0.0
 end = 3.0
 
-[node name="laser25" parent="." index="69" instance=ExtResource("3_c6fks")]
-position = Vector2(8646, -1666)
+[node name="laser25" parent="." index="66" instance=ExtResource("3_c6fks")]
+position = Vector2(8662, -1730)
 rotation = 3.14159
 cycle = 9.0
 
-[node name="laser26" parent="." index="70" instance=ExtResource("3_c6fks")]
-position = Vector2(8707, -1666)
-rotation = 3.14159
-cycle = 9.0
-start = 6.0
-end = 9.0
-
-[node name="laser27" parent="." index="71" instance=ExtResource("3_c6fks")]
-position = Vector2(10801, -1602)
-rotation = 3.14159
-cycle = 9.0
-start = 0.0
-end = 3.0
-
-[node name="laser28" parent="." index="72" instance=ExtResource("3_c6fks")]
-position = Vector2(10863, -1602)
-rotation = 3.14159
-cycle = 9.0
-
-[node name="laser29" parent="." index="73" instance=ExtResource("3_c6fks")]
-position = Vector2(10924, -1602)
+[node name="laser26" parent="." index="67" instance=ExtResource("3_c6fks")]
+position = Vector2(8907, -1743)
 rotation = 3.14159
 cycle = 9.0
 start = 6.0
 end = 9.0
 
-[node name="laser30" parent="." index="74" instance=ExtResource("3_c6fks")]
-position = Vector2(11034, -907)
+[node name="laser27" parent="." index="68" instance=ExtResource("3_c6fks")]
+position = Vector2(10380, -978)
+rotation = 3.14159
+cycle = 12.0
+start = 6.0
+end = 9.0
+
+[node name="laser28" parent="." index="69" instance=ExtResource("3_c6fks")]
+position = Vector2(10987, -977)
+rotation = 3.14159
+cycle = 12.0
+start = 6.0
+end = 9.0
+
+[node name="laser29" parent="." index="70" instance=ExtResource("3_c6fks")]
+position = Vector2(11775, -999)
+rotation = 3.14159
+cycle = 12.0
+start = 6.0
+end = 9.0
+
+[node name="laser30" parent="." index="71" instance=ExtResource("3_c6fks")]
+position = Vector2(11367, -969)
+rotation = 3.14159
+cycle = 12.0
+start = 6.0
+end = 9.0
+
+[node name="laser31" parent="." index="72" instance=ExtResource("3_c6fks")]
+position = Vector2(4472, -333)
 rotation = 3.14159
 cycle = 10.0
-start = 1.0
-end = 3.0
-spin = 0.2
+start = 0.0
+end = 10.0
+spin = -0.2
 
-[node name="laser31" parent="." index="75" instance=ExtResource("3_c6fks")]
-position = Vector2(4381, 311)
-rotation = 3.14159
+[node name="laser32" parent="." index="73" instance=ExtResource("3_c6fks")]
+position = Vector2(4472, -333)
+rotation = 1.57079
 cycle = 10.0
-start = 1.0
-end = 3.0
-spin = 0.2
+start = 0.0
+end = 10.0
+spin = -0.2
+
+[node name="laser33" parent="." index="74" instance=ExtResource("3_c6fks")]
+position = Vector2(4472, -333)
+cycle = 10.0
+start = 0.0
+end = 10.0
+spin = -0.2
+
+[node name="laser34" parent="." index="75" instance=ExtResource("3_c6fks")]
+position = Vector2(4472, -333)
+rotation = -1.57079
+cycle = 10.0
+start = 0.0
+end = 10.0
+spin = -0.2
+
+[node name="coin20" parent="." index="90"]
+position = Vector2(4290, -56)
+
+[node name="coin21" parent="." index="91"]
+position = Vector2(4679, -73)
+
+[node name="Platform2" parent="." index="114" instance=ExtResource("4_pcplg")]
+position = Vector2(4069, -166)
+rotation = 1.57079
+
+[node name="Platform11" parent="." index="115" instance=ExtResource("4_pcplg")]
+position = Vector2(4067, -406)
+rotation = 1.57079
+
+[node name="Platform12" parent="." index="116" instance=ExtResource("4_pcplg")]
+position = Vector2(4064, -640)
+rotation = 1.57079
+
+[node name="Platform13" parent="." index="117" instance=ExtResource("4_pcplg")]
+position = Vector2(4882, -166)
+rotation = 1.57079
+
+[node name="Platform14" parent="." index="118" instance=ExtResource("4_pcplg")]
+position = Vector2(4890, -422)
+rotation = 1.57079
+
+[node name="Platform15" parent="." index="119" instance=ExtResource("4_pcplg")]
+position = Vector2(4902, -674)
+rotation = 1.57079
