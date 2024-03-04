@@ -15,7 +15,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0.0001, 1),
 "transitions": PackedFloat32Array(0.267944, 0.406126),
 "update": 0,
-"values": [Vector2(-1920, 0), Vector2(0, 0)]
+"values": [Vector2(-960, 0), Vector2(0, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_eocjl"]
@@ -42,7 +42,8 @@ _data = {
 
 [node name="Loading" type="TextureRect"]
 z_index = 1
-offset_left = -1920.0
+offset_left = -960.0
+offset_right = 960.0
 offset_bottom = 1080.0
 texture = ExtResource("1_m7ni5")
 script = ExtResource("2_swrwv")
