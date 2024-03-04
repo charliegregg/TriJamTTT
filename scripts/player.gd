@@ -97,9 +97,9 @@ func _on_death_timer_timeout():
 
 
 func on_running_finished():
-	if is_running and not is_on_grass():
+	if is_running and not is_on_grass() and is_on_floor():
 		$RunningStone.play()
-	elif is_running:
+	elif is_running and is_on_floor():
 		$RunningGrass.play()
 
 func is_on_grass():

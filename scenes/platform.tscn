@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://f7564uveotpy"]
 
-[ext_resource type="Texture2D" uid="uid://cl1tidara4oel" path="res://icon.svg" id="1_ofjog"]
+[ext_resource type="Texture2D" uid="uid://7g3lr1xfrryg" path="res://resources/bricks.png" id="1_u5txr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4oqn5"]
 size = Vector2(256, 64)
@@ -11,5 +11,5 @@ size = Vector2(256, 64)
 shape = SubResource("RectangleShape2D_4oqn5")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(2, 0.5)
-texture = ExtResource("1_ofjog")
+texture_repeat = 2
+texture = ExtResource("1_u5txr")

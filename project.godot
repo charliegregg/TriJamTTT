@@ -62,3 +62,4 @@ move_down={
 [rendering]
 
 renderer/rendering_method="gl_compatibility"
+environment/defaults/default_clear_color=Color(0.156863, 0.611765, 0.85098, 1)
