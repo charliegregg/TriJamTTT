@@ -29,8 +29,6 @@ func _physics_process(delta):
 		velocity = Vector2.ZERO
 		return
 	var inp = Vector2.ZERO
-	if Input.is_action_just_pressed("ui_cancel"):
-		get_tree().quit()
 	if alive: 
 		last_jump += delta
 		last_ground += delta

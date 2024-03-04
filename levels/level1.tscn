@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://c0uqap5726bka"]
 
 [ext_resource type="PackedScene" uid="uid://dugyht4vx4s4h" path="res://levels/level.tscn" id="1_vchqw"]
-[ext_resource type="PackedScene" uid="uid://bm5tlq8turvwb" path="res://levels/level2.tscn" id="2_guxdh"]
+[ext_resource type="PackedScene" uid="uid://basevxw3qfpgi" path="res://levels/level4.tscn" id="2_nmjrx"]
 
 [node name="level" instance=ExtResource("1_vchqw")]
 
@@ -9,4 +9,4 @@
 text = "GAME NAME"
 
 [node name="flag" parent="." index="3"]
-next_level = ExtResource("2_guxdh")
+next_level = ExtResource("2_nmjrx")

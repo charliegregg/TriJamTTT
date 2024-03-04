@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://bw0egdh023qii"]
 
 [ext_resource type="PackedScene" uid="uid://dugyht4vx4s4h" path="res://levels/level.tscn" id="1_4uekh"]
-[ext_resource type="PackedScene" uid="uid://basevxw3qfpgi" path="res://levels/level4.tscn" id="2_e73bh"]
+[ext_resource type="PackedScene" uid="uid://c6td63h2vb7jn" path="res://levels/win.tscn" id="2_ai3vt"]
 [ext_resource type="PackedScene" uid="uid://d6j64as3f14u" path="res://scenes/laser.tscn" id="3_c6fks"]
 [ext_resource type="PackedScene" uid="uid://f7564uveotpy" path="res://scenes/platform.tscn" id="4_pcplg"]
 
@@ -12,7 +12,7 @@ text = "There's too many lasers"
 level_name = "lasers"
 
 [node name="flag" parent="." index="3"]
-next_level = ExtResource("2_e73bh")
+next_level = ExtResource("2_ai3vt")
 
 [node name="Platform5" parent="." index="38"]
 position = Vector2(3963, 305)

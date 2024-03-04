@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://bm5tlq8turvwb"]
 
 [ext_resource type="PackedScene" uid="uid://dugyht4vx4s4h" path="res://levels/level.tscn" id="1_8swmy"]
-[ext_resource type="PackedScene" uid="uid://bw0egdh023qii" path="res://levels/level3.tscn" id="2_ggcke"]
+[ext_resource type="PackedScene" uid="uid://cqobp0tf4dpam" path="res://levels/level5.tscn" id="2_6jeur"]
 [ext_resource type="PackedScene" uid="uid://d1f31r6p2o64i" path="res://scenes/enemy.tscn" id="2_hhiyg"]
 
 [node name="level" instance=ExtResource("1_8swmy")]
@@ -11,7 +11,7 @@ text = "There's too many enemies"
 level_name = "enemies"
 
 [node name="flag" parent="." index="3"]
-next_level = ExtResource("2_ggcke")
+next_level = ExtResource("2_6jeur")
 
 [node name="enemy3" parent="." index="53" instance=ExtResource("2_hhiyg")]
 position = Vector2(1371, 154)

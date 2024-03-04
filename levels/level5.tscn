@@ -1,7 +1,8 @@
-[gd_scene load_steps=57 format=3 uid="uid://cqobp0tf4dpam"]
+[gd_scene load_steps=58 format=3 uid="uid://cqobp0tf4dpam"]
 
 [ext_resource type="PackedScene" uid="uid://dugyht4vx4s4h" path="res://levels/level.tscn" id="1_ywp72"]
 [ext_resource type="Script" path="res://levels/aaaaa.gd" id="2_r18vl"]
+[ext_resource type="PackedScene" uid="uid://bw0egdh023qii" path="res://levels/level3.tscn" id="3_8aie1"]
 [ext_resource type="Script" path="res://levels/spkie.gd" id="3_txs0f"]
 [ext_resource type="Script" path="res://addons/rmsmartshape/shapes/shape_closed.gd" id="4_voq6p"]
 [ext_resource type="Resource" uid="uid://clul4g6yglxpq" path="res://resources/level_part_a.tres" id="5_cnw60"]
@@ -322,6 +323,7 @@ level_name = "spikes"
 
 [node name="flag" parent="." index="3"]
 position = Vector2(12795, -1055)
+next_level = ExtResource("3_8aie1")
 
 [node name="BigPlatform5" parent="." index="62"]
 position = Vector2(12895, -737)

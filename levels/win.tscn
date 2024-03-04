@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://c6td63h2vb7jn"]
+
+[ext_resource type="FontFile" uid="uid://c8qomxm1q4yod" path="res://resources/AppleTea-z8R1a.ttf" id="1_3oyaj"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_tg2k2"]
+font = ExtResource("1_3oyaj")
+font_size = 181
+
+[node name="win" type="Node2D"]
+
+[node name="Label" type="Label" parent="."]
+offset_left = 57.0
+offset_top = 166.0
+offset_right = 916.0
+offset_bottom = 351.0
+text = "You win!"
+label_settings = SubResource("LabelSettings_tg2k2")

@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://basevxw3qfpgi"]
 
 [ext_resource type="PackedScene" uid="uid://dugyht4vx4s4h" path="res://levels/level.tscn" id="1_ueiuy"]
-[ext_resource type="PackedScene" uid="uid://cqobp0tf4dpam" path="res://levels/level5.tscn" id="2_xy6fn"]
+[ext_resource type="PackedScene" uid="uid://bm5tlq8turvwb" path="res://levels/level2.tscn" id="2_nhfne"]
 [ext_resource type="PackedScene" uid="uid://cpr7b71jucj6n" path="res://scenes/break_platform.tscn" id="3_heuld"]
 [ext_resource type="PackedScene" uid="uid://cdi24c03fch2a" path="res://scenes/semiplatform.tscn" id="4_lxufa"]
 [ext_resource type="PackedScene" uid="uid://f7564uveotpy" path="res://scenes/platform.tscn" id="5_xrbtb"]
@@ -14,7 +14,7 @@ text = "There's too many platforms"
 level_name = "platforms"
 
 [node name="flag" parent="." index="3"]
-next_level = ExtResource("2_xy6fn")
+next_level = ExtResource("2_nhfne")
 
 [node name="BreakPlatform7" parent="." index="53" instance=ExtResource("3_heuld")]
 position = Vector2(1398, -398)
