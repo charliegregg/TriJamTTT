@@ -19,21 +19,30 @@ func _physics_process(delta):
 	timer = fmod(timer + delta, cycle)
 	if timer > start and timer <= end:
 		if not enabled:
-			enable()
+			start_enable()
 	else:
 		if enabled:
-			disable()
+			start_disable()
 
 func enable():
+	$PulseSound.play()
 	$Beam/Area2D/CollisionShape2D.disabled = false
 	$Beam/Sprite2D.show()
 	$EndSprite.show()
-	enabled = true
+	
 func disable():
 	$Beam/Area2D/CollisionShape2D.disabled = true
 	$Beam/Sprite2D.hide()
 	$EndSprite.hide()
+	
+
+func start_enable():
+	enabled = true
+	$ChargeTimer.start()
+	$ChargeSound.play()
+func start_disable():
 	enabled = false
+	$FireTimer.start()
 
 func _on_area_2d_body_entered(body):
 	if body is Player or body is Enemy:

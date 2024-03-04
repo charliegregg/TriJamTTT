@@ -1,7 +1,13 @@
-[gd_scene load_steps=8 format=3 uid="uid://d6j64as3f14u"]
+[gd_scene load_steps=16 format=3 uid="uid://d6j64as3f14u"]
 
 [ext_resource type="Script" path="res://scripts/laser.gd" id="1_7wu1f"]
 [ext_resource type="Texture2D" uid="uid://cl1tidara4oel" path="res://icon.svg" id="1_uxs28"]
+[ext_resource type="AudioStream" uid="uid://bjk2ogqugoscs" path="res://SFX/Laser/Disintegrator A.wav" id="3_3phxs"]
+[ext_resource type="AudioStream" uid="uid://d4ig6c2be7w8y" path="res://SFX/Laser/Power Charge A.wav" id="3_bsh01"]
+[ext_resource type="AudioStream" uid="uid://cji22cgvqxq1e" path="res://SFX/Laser/Disintegrator B.wav" id="4_gwgx4"]
+[ext_resource type="AudioStream" uid="uid://dlhy6t3jo16sx" path="res://SFX/Laser/Power Charge B.wav" id="4_mb65y"]
+[ext_resource type="AudioStream" uid="uid://77oainudvyea" path="res://SFX/Laser/Power Charge C.wav" id="5_24oav"]
+[ext_resource type="AudioStream" uid="uid://dny2my34yyk0x" path="res://SFX/Laser/Disintegrator C.wav" id="5_exck4"]
 
 [sub_resource type="Gradient" id="Gradient_76n7o"]
 offsets = PackedFloat32Array(0, 0.2, 0.3, 0.5, 0.7, 0.8, 1)
@@ -24,8 +30,29 @@ fill = 1
 fill_from = Vector2(0.5, 0.5)
 fill_to = Vector2(0.5, 0)
 
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_322wo"]
+streams_count = 3
+stream_0/stream = ExtResource("3_3phxs")
+stream_0/weight = 1.0
+stream_1/stream = ExtResource("4_gwgx4")
+stream_1/weight = 1.0
+stream_2/stream = ExtResource("5_exck4")
+stream_2/weight = 1.0
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_q663y"]
+streams_count = 3
+stream_0/stream = ExtResource("3_bsh01")
+stream_0/weight = 1.0
+stream_1/stream = ExtResource("4_mb65y")
+stream_1/weight = 1.0
+stream_2/stream = ExtResource("5_24oav")
+stream_2/weight = 1.0
+
 [node name="laser" type="Node2D"]
 script = ExtResource("1_7wu1f")
+cycle = 8.0
+start = 3.0
+end = 6.0
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.5, 0.5)
@@ -58,4 +85,20 @@ rotation = 3.14159
 scale = Vector2(0.8, 0.8)
 texture = SubResource("GradientTexture2D_ud2h7")
 
+[node name="PulseSound" type="AudioStreamPlayer2D" parent="."]
+stream = SubResource("AudioStreamRandomizer_322wo")
+
+[node name="ChargeSound" type="AudioStreamPlayer2D" parent="."]
+stream = SubResource("AudioStreamRandomizer_q663y")
+
+[node name="ChargeTimer" type="Timer" parent="."]
+wait_time = 1.5
+one_shot = true
+
+[node name="FireTimer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
 [connection signal="body_entered" from="Beam/Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="timeout" from="ChargeTimer" to="." method="enable"]
+[connection signal="timeout" from="FireTimer" to="." method="disable"]
