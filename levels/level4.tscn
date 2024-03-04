@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://dugyht4vx4s4h" path="res://levels/level.tscn" id="1_ueiuy"]
 [ext_resource type="PackedScene" uid="uid://c0hp8q2rxfmpe" path="res://levels/level5.tscn" id="2_xy6fn"]
-[ext_resource type="PackedScene" uid="uid://bjlga6dm0o6im" path="res://scenes/break_platform.tscn" id="3_heuld"]
+[ext_resource type="PackedScene" uid="uid://cpr7b71jucj6n" path="res://scenes/break_platform.tscn" id="3_heuld"]
 [ext_resource type="PackedScene" uid="uid://cdi24c03fch2a" path="res://scenes/semiplatform.tscn" id="4_lxufa"]
 [ext_resource type="PackedScene" uid="uid://f7564uveotpy" path="res://scenes/platform.tscn" id="5_xrbtb"]
 [ext_resource type="PackedScene" uid="uid://ckgee5fiwgkwi" path="res://scenes/big_platform.tscn" id="6_dw2m1"]
@@ -64,28 +64,28 @@ position = Vector2(3550, -366)
 [node name="Platform14" parent="." index="66" instance=ExtResource("5_xrbtb")]
 position = Vector2(5065, -210)
 
-[node name="SemiPlatform16" parent="." index="67" instance=ExtResource("4_lxufa")]
+[node name="SemiPlatform17" parent="." index="67" instance=ExtResource("4_lxufa")]
 position = Vector2(3924, -28)
 
-[node name="SemiPlatform17" parent="." index="68" instance=ExtResource("4_lxufa")]
+[node name="SemiPlatform18" parent="." index="68" instance=ExtResource("4_lxufa")]
 position = Vector2(4330, -167)
 
-[node name="SemiPlatform18" parent="." index="69" instance=ExtResource("4_lxufa")]
+[node name="SemiPlatform19" parent="." index="69" instance=ExtResource("4_lxufa")]
 position = Vector2(3625, -202)
 
-[node name="SemiPlatform19" parent="." index="70" instance=ExtResource("4_lxufa")]
+[node name="SemiPlatform20" parent="." index="70" instance=ExtResource("4_lxufa")]
 position = Vector2(3660, 147)
 
-[node name="SemiPlatform20" parent="." index="71" instance=ExtResource("4_lxufa")]
+[node name="SemiPlatform21" parent="." index="71" instance=ExtResource("4_lxufa")]
 position = Vector2(4469, 147)
 
-[node name="SemiPlatform21" parent="." index="72" instance=ExtResource("4_lxufa")]
+[node name="SemiPlatform22" parent="." index="72" instance=ExtResource("4_lxufa")]
 position = Vector2(3942, 403)
 
-[node name="SemiPlatform22" parent="." index="73" instance=ExtResource("4_lxufa")]
+[node name="SemiPlatform23" parent="." index="73" instance=ExtResource("4_lxufa")]
 position = Vector2(3949, -423)
 
-[node name="SemiPlatform23" parent="." index="74" instance=ExtResource("4_lxufa")]
+[node name="SemiPlatform24" parent="." index="74" instance=ExtResource("4_lxufa")]
 position = Vector2(6205, 407)
 
 [node name="BreakPlatform10" parent="." index="75" instance=ExtResource("3_heuld")]

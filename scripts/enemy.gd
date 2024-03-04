@@ -11,6 +11,7 @@ var alive = true
 
 func _ready():
 	inp = (randi() % 2)*2 - 1
+	$Sprite2D.play("run")
 
 func _physics_process(delta):
 	if not alive:
@@ -32,6 +33,10 @@ func _physics_process(delta):
 		inp = 1
 	if not $RightArea2.has_overlapping_bodies():
 		inp = -1
+	if inp == -1:
+		$Sprite2D.flip_h = true
+	if inp == 1:
+		$Sprite2D.flip_h = false
 	
 func die():
 	$Sprite2D.hide()
