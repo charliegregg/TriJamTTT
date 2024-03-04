@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://cdi24c03fch2a"]
 
-[ext_resource type="Texture2D" uid="uid://cl1tidara4oel" path="res://icon.svg" id="1_c0iff"]
 [ext_resource type="Script" path="res://scripts/semiplatform.gd" id="1_orw3c"]
+[ext_resource type="Texture2D" uid="uid://ckvoqy7rdcodf" path="res://resources/brickssemi.png" id="2_2fgn6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4oqn5"]
 size = Vector2(256, 64)
@@ -14,5 +14,4 @@ shape = SubResource("RectangleShape2D_4oqn5")
 one_way_collision = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(2, 0.5)
-texture = ExtResource("1_c0iff")
+texture = ExtResource("2_2fgn6")
