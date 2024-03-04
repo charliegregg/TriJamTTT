@@ -18,12 +18,16 @@ var in_air = false
 var is_running = false
 
 var alive = true
+var f = false
 
 func _ready():
 	pass
 	##$DeathAnimation.play("RESET")
 	
 func _physics_process(delta):
+	if f:
+		velocity = Vector2.ZERO
+		return
 	var inp = Vector2.ZERO
 	if Input.is_action_just_pressed("ui_cancel"):
 		get_tree().quit()
@@ -87,6 +91,7 @@ func die():
 	loading.hide_level()
 	alive = false
 	$CollisionShape2D.disabled = true
+	$AnimatedSprite2D.stop()
 func bounce():
 	velocity.y = -sqrt(3 * GRAVITY * jump_height)
 
@@ -107,3 +112,6 @@ func is_on_grass():
 	if not thing:
 		return false
 	return thing.get_collider().is_in_group("ground")
+
+func freeze():
+	f = true
