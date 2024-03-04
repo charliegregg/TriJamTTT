@@ -68,11 +68,12 @@ func _physics_process(delta):
 	velocity += inp * speed * delta / 2
 	velocity.x *= exp(-friction * delta)
 	
-	if position.y > 2000 and alive:
+	if position.y > 2000:
 		die()
 	
 	
 func die():
+	if not alive: return
 	$DeathTimer.start()
 #	$DeathAnimation.play("die")
 	loading.hide_level()
