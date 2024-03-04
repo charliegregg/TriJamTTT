@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://5vatv14d1uk8"
+path="res://.godot/imported/Shoe Step Stone Hard D.wav-492b198e3e0c910ef0a12da65db7302c.sample"
+
+[deps]
+
+source_file="res://SFX/Movement/Stone/Shoe Step Stone Hard D.wav"
+dest_files=["res://.godot/imported/Shoe Step Stone Hard D.wav-492b198e3e0c910ef0a12da65db7302c.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

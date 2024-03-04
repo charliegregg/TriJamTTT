@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://b73fscpj3o4hg"]
+[gd_scene load_steps=4 format=3 uid="uid://b73fscpj3o4hg"]
 
 [ext_resource type="PackedScene" uid="uid://f7564uveotpy" path="res://scenes/platform.tscn" id="1_hybmo"]
 [ext_resource type="PackedScene" uid="uid://dggrmokvyx76q" path="res://scenes/player.tscn" id="2_p316p"]
+[ext_resource type="PackedScene" uid="uid://txhwo0foi6vn" path="res://scenes/loading.tscn" id="3_0cjea"]
 
 [node name="Main" type="Node2D"]
 
@@ -16,3 +17,5 @@ position = Vector2(1437, 706)
 
 [node name="Player" parent="." instance=ExtResource("2_p316p")]
 position = Vector2(260, 216)
+
+[node name="Loading" parent="." instance=ExtResource("3_0cjea")]

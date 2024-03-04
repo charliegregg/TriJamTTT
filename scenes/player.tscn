@@ -1,60 +1,98 @@
-[gd_scene load_steps=11 format=3 uid="uid://dggrmokvyx76q"]
+[gd_scene load_steps=15 format=3 uid="uid://dggrmokvyx76q"]
 
-[ext_resource type="Texture2D" uid="uid://cl1tidara4oel" path="res://icon.svg" id="1_mwvj6"]
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_otn8r"]
-[ext_resource type="Shader" path="res://shaders/player_death.gdshader" id="2_y3dff"]
-
-[sub_resource type="FastNoiseLite" id="FastNoiseLite_b5xjo"]
-
-[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_w2o4t"]
-width = 64
-height = 64
-noise = SubResource("FastNoiseLite_b5xjo")
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_rqnlb"]
-shader = ExtResource("2_y3dff")
-shader_parameter/noise_amp = 0.0
-shader_parameter/noise = SubResource("NoiseTexture2D_w2o4t")
+[ext_resource type="Texture2D" uid="uid://bnvvq2gru844" path="res://resources/player.png" id="2_qcuw8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_38epf"]
 size = Vector2(128, 128)
 
-[sub_resource type="Animation" id="Animation_2pyrc"]
-resource_name = "die"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:material:shader_parameter/noise_amp")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [0.0, 3.0]
-}
+[sub_resource type="AtlasTexture" id="AtlasTexture_anna3"]
+atlas = ExtResource("2_qcuw8")
+region = Rect2(0, 0, 16, 16)
 
-[sub_resource type="Animation" id="Animation_unrev"]
-resource_name = "RESET"
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:material:shader_parameter/noise_amp")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
-}
+[sub_resource type="AtlasTexture" id="AtlasTexture_t4q6t"]
+atlas = ExtResource("2_qcuw8")
+region = Rect2(0, 32, 16, 16)
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_vshvh"]
-_data = {
-"RESET": SubResource("Animation_unrev"),
-"die": SubResource("Animation_2pyrc")
-}
+[sub_resource type="AtlasTexture" id="AtlasTexture_2h0qu"]
+atlas = ExtResource("2_qcuw8")
+region = Rect2(16, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7ecl7"]
+atlas = ExtResource("2_qcuw8")
+region = Rect2(32, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xh046"]
+atlas = ExtResource("2_qcuw8")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s4qnh"]
+atlas = ExtResource("2_qcuw8")
+region = Rect2(16, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w84de"]
+atlas = ExtResource("2_qcuw8")
+region = Rect2(32, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_abe0i"]
+atlas = ExtResource("2_qcuw8")
+region = Rect2(48, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_il56u"]
+atlas = ExtResource("2_qcuw8")
+region = Rect2(64, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_68dx8"]
+atlas = ExtResource("2_qcuw8")
+region = Rect2(80, 16, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qswva"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_anna3")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t4q6t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2h0qu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7ecl7")
+}],
+"loop": false,
+"name": &"jump",
+"speed": 32.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xh046")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s4qnh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w84de")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_abe0i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_il56u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_68dx8")
+}],
+"loop": true,
+"name": &"run",
+"speed": 8.0
+}]
 
 [node name="Player" type="CharacterBody2D"]
 z_index = 1
@@ -63,19 +101,18 @@ collision_layer = 4
 floor_max_angle = 0.523599
 script = ExtResource("1_otn8r")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-material = SubResource("ShaderMaterial_rqnlb")
-texture = ExtResource("1_mwvj6")
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_38epf")
 
-[node name="DeathTimer" type="Timer" parent="."]
-one_shot = true
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-0.5, -0.5)
+scale = Vector2(8, 8)
+sprite_frames = SubResource("SpriteFrames_qswva")
+animation = &"jump"
+frame = 2
+frame_progress = 1.0
 
-[node name="DeathAnimation" type="AnimationPlayer" parent="."]
-libraries = {
-"": SubResource("AnimationLibrary_vshvh")
-}
+[node name="DeathTimer" type="Timer" parent="."]
 
 [connection signal="timeout" from="DeathTimer" to="." method="_on_death_timer_timeout"]

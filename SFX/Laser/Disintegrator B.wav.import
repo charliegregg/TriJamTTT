@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cji22cgvqxq1e"
+path="res://.godot/imported/Disintegrator B.wav-d9a6058d67d60085db0f1ba34d18f718.sample"
+
+[deps]
+
+source_file="res://SFX/Laser/Disintegrator B.wav"
+dest_files=["res://.godot/imported/Disintegrator B.wav-d9a6058d67d60085db0f1ba34d18f718.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

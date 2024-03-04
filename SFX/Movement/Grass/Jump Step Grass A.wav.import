@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dn76xjnjvotsr"
+path="res://.godot/imported/Jump Step Grass A.wav-96146a2a4b711144c98ef415ca9d4f6e.sample"
+
+[deps]
+
+source_file="res://SFX/Movement/Grass/Jump Step Grass A.wav"
+dest_files=["res://.godot/imported/Jump Step Grass A.wav-96146a2a4b711144c98ef415ca9d4f6e.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
