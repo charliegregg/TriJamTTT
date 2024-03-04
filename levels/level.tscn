@@ -281,7 +281,7 @@ script = ExtResource("1_l2yrs")
 position = Vector2(6, 132)
 loading = NodePath("../CamAnch/Cam/Control/Control/Loading")
 
-[node name="Level" type="StaticBody2D" parent="."]
+[node name="Level" type="StaticBody2D" parent="." groups=["ground"]]
 z_index = 11
 
 [node name="LeftLevel" type="Node2D" parent="Level"]
@@ -359,7 +359,6 @@ offset_left = -305.0
 offset_top = -509.0
 offset_right = 186.0
 offset_bottom = -455.0
-level_name = "lasers"
 
 [node name="flag" parent="." instance=ExtResource("6_vgl56")]
 position = Vector2(12800, -1030)
