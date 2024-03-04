@@ -1,7 +1,25 @@
-[gd_scene load_steps=15 format=3 uid="uid://dggrmokvyx76q"]
+[gd_scene load_steps=39 format=3 uid="uid://dggrmokvyx76q"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_otn8r"]
 [ext_resource type="Texture2D" uid="uid://bnvvq2gru844" path="res://resources/player.png" id="2_qcuw8"]
+[ext_resource type="AudioStream" uid="uid://vfmcnxxd2grn" path="res://SFX/Movement/Stone/Shoe Step Stone Hard A.wav" id="3_djs8f"]
+[ext_resource type="AudioStream" uid="uid://dkypttn3dyomk" path="res://SFX/Movement/Stone/Shoe Step Stone Hard B.wav" id="4_04fmv"]
+[ext_resource type="AudioStream" uid="uid://bf4hqq4rx73lt" path="res://SFX/Movement/Stone/Shoe Step Stone Hard C.wav" id="5_vpvww"]
+[ext_resource type="AudioStream" uid="uid://5vatv14d1uk8" path="res://SFX/Movement/Stone/Shoe Step Stone Hard D.wav" id="6_vgvqi"]
+[ext_resource type="AudioStream" uid="uid://ccgjfi1uyo6e" path="res://SFX/Movement/Stone/Shoe Step Stone Hard E.wav" id="7_o8gbk"]
+[ext_resource type="AudioStream" uid="uid://b166t2bk637e1" path="res://SFX/Movement/Stone/Jump Step Stone A.wav" id="8_fwh0o"]
+[ext_resource type="AudioStream" uid="uid://jqfa6iwesaii" path="res://SFX/Movement/Stone/Jump Step Stone B.wav" id="9_ce40l"]
+[ext_resource type="AudioStream" uid="uid://ddc5ut03sxhhq" path="res://SFX/Movement/Stone/Land Step Stone A.wav" id="10_cexvb"]
+[ext_resource type="AudioStream" uid="uid://b5036yq7rty4y" path="res://SFX/Movement/Stone/Land Step Stone B.wav" id="11_f7nu4"]
+[ext_resource type="AudioStream" uid="uid://cvrmy87fhrldf" path="res://SFX/Movement/Grass/Land Step Grass A.wav" id="12_ojn66"]
+[ext_resource type="AudioStream" uid="uid://56b7ixnkt6uu" path="res://SFX/Movement/Grass/Land Step Grass B.wav" id="13_y2pse"]
+[ext_resource type="AudioStream" uid="uid://dq21v5tsb74fb" path="res://SFX/Movement/Grass/Jump Step Grass B.wav" id="14_kewd4"]
+[ext_resource type="AudioStream" uid="uid://dn76xjnjvotsr" path="res://SFX/Movement/Grass/Jump Step Grass A.wav" id="15_np83l"]
+[ext_resource type="AudioStream" uid="uid://bqfmm4d4geg8p" path="res://SFX/Movement/Grass/Shoe Step Grass Hard A.wav" id="16_iie56"]
+[ext_resource type="AudioStream" uid="uid://vclbw6fogo01" path="res://SFX/Movement/Grass/Shoe Step Grass Hard B.wav" id="17_2axni"]
+[ext_resource type="AudioStream" uid="uid://cbuk175g0yrxl" path="res://SFX/Movement/Grass/Shoe Step Grass Hard C.wav" id="18_7fggq"]
+[ext_resource type="AudioStream" uid="uid://df13hmrxol01o" path="res://SFX/Movement/Grass/Shoe Step Grass Hard D.wav" id="19_xrahd"]
+[ext_resource type="AudioStream" uid="uid://dq106r54sqr7p" path="res://SFX/Movement/Grass/Shoe Step Grass Hard E.wav" id="20_ccqfc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_38epf"]
 size = Vector2(128, 128)
@@ -94,6 +112,60 @@ animations = [{
 "speed": 8.0
 }]
 
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_srskr"]
+streams_count = 5
+stream_0/stream = ExtResource("3_djs8f")
+stream_0/weight = 1.0
+stream_1/stream = ExtResource("4_04fmv")
+stream_1/weight = 1.0
+stream_2/stream = ExtResource("5_vpvww")
+stream_2/weight = 1.0
+stream_3/stream = ExtResource("6_vgvqi")
+stream_3/weight = 1.0
+stream_4/stream = ExtResource("7_o8gbk")
+stream_4/weight = 1.0
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_qshq3"]
+streams_count = 2
+stream_0/stream = ExtResource("8_fwh0o")
+stream_0/weight = 1.0
+stream_1/stream = ExtResource("9_ce40l")
+stream_1/weight = 1.0
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_e8033"]
+streams_count = 2
+stream_0/stream = ExtResource("10_cexvb")
+stream_0/weight = 1.0
+stream_1/stream = ExtResource("11_f7nu4")
+stream_1/weight = 1.0
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_43ie1"]
+streams_count = 2
+stream_0/stream = ExtResource("12_ojn66")
+stream_0/weight = 1.0
+stream_1/stream = ExtResource("13_y2pse")
+stream_1/weight = 1.0
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_tvcxg"]
+streams_count = 2
+stream_0/stream = ExtResource("14_kewd4")
+stream_0/weight = 1.0
+stream_1/stream = ExtResource("15_np83l")
+stream_1/weight = 1.0
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_ohrbt"]
+streams_count = 5
+stream_0/stream = ExtResource("16_iie56")
+stream_0/weight = 1.0
+stream_1/stream = ExtResource("17_2axni")
+stream_1/weight = 1.0
+stream_2/stream = ExtResource("18_7fggq")
+stream_2/weight = 1.0
+stream_3/stream = ExtResource("19_xrahd")
+stream_3/weight = 1.0
+stream_4/stream = ExtResource("20_ccqfc")
+stream_4/weight = 1.0
+
 [node name="Player" type="CharacterBody2D"]
 z_index = 1
 scale = Vector2(0.5, 0.5)
@@ -115,4 +187,33 @@ frame_progress = 1.0
 
 [node name="DeathTimer" type="Timer" parent="."]
 
+[node name="RunningStone" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamRandomizer_srskr")
+volume_db = 10.0
+
+[node name="JumpStone" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamRandomizer_qshq3")
+volume_db = 10.0
+
+[node name="LandStone" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamRandomizer_e8033")
+volume_db = 10.0
+
+[node name="LandGrass" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamRandomizer_43ie1")
+volume_db = 10.0
+
+[node name="JumpGrass" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamRandomizer_tvcxg")
+volume_db = 10.0
+
+[node name="RunningGrass" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamRandomizer_ohrbt")
+volume_db = 10.0
+
+[node name="StepTimer" type="Timer" parent="."]
+wait_time = 0.4
+autostart = true
+
 [connection signal="timeout" from="DeathTimer" to="." method="_on_death_timer_timeout"]
+[connection signal="timeout" from="StepTimer" to="." method="on_running_finished"]

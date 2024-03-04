@@ -37,11 +37,19 @@ func _physics_process(delta):
 			last_ground = 0
 		if is_on_floor() and in_air:
 			in_air = false
+			if is_on_grass():
+				$LandGrass.play()
+			else:
+				$LandStone.play()
 			$AnimatedSprite2D.play_backwards("jump")
 		if (is_on_floor() or last_ground < coyote) and last_jump < pre_jump:
 			last_ground = 1
 			last_jump = 1
 			velocity.y = -sqrt(2 * GRAVITY * jump_height)
+			if is_on_grass():
+				$JumpGrass.play()
+			else:
+				$JumpStone.play()
 			$AnimatedSprite2D.play("jump", 0.5)
 			in_air = true
 			is_running = false
@@ -86,3 +94,16 @@ func bounce():
 func _on_death_timer_timeout():
 	Globals.load_coins()
 	get_tree().reload_current_scene()
+
+
+func on_running_finished():
+	if is_running and not is_on_grass():
+		$RunningStone.play()
+	elif is_running:
+		$RunningGrass.play()
+
+func is_on_grass():
+	var thing = get_last_slide_collision()
+	if not thing:
+		return false
+	return thing.get_collider().is_in_group("ground")
