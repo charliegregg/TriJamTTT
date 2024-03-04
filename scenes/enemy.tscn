@@ -14,6 +14,7 @@ size = Vector2(128, 128)
 [node name="enemy" type="CharacterBody2D"]
 scale = Vector2(0.4, 0.4)
 collision_layer = 2
+collision_mask = 3
 floor_max_angle = 0.523599
 script = ExtResource("1_0j4s5")
 
@@ -28,6 +29,8 @@ rect = Rect2(-64, -64, 128, 128)
 
 [node name="LeftArea" type="Area2D" parent="."]
 position = Vector2(-80, 0)
+collision_layer = 0
+collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LeftArea"]
 shape = SubResource("RectangleShape2D_tqpe5")
@@ -40,19 +43,27 @@ collision_mask = 4
 shape = SubResource("RectangleShape2D_tji6n")
 
 [node name="LeftArea2" type="Area2D" parent="."]
-position = Vector2(-80, 64)
+position = Vector2(-80, 100)
+scale = Vector2(1, 4)
+collision_layer = 0
+collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LeftArea2"]
 shape = SubResource("RectangleShape2D_tqpe5")
 
 [node name="RightArea" type="Area2D" parent="."]
 position = Vector2(80, 0)
+collision_layer = 0
+collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RightArea"]
 shape = SubResource("RectangleShape2D_tqpe5")
 
 [node name="RightArea2" type="Area2D" parent="."]
-position = Vector2(80, 64)
+position = Vector2(80, 100)
+scale = Vector2(1, 4)
+collision_layer = 0
+collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RightArea2"]
 shape = SubResource("RectangleShape2D_tqpe5")
