@@ -77,7 +77,7 @@ shape = SubResource("RectangleShape2D_gfwjv")
 [node name="RayCast2D" type="RayCast2D" parent="Beam"]
 unique_name_in_owner = true
 scale = Vector2(1, 0.01)
-target_position = Vector2(0, -1024)
+target_position = Vector2(0, -10240)
 
 [node name="EndSprite" type="Sprite2D" parent="."]
 z_index = -1
