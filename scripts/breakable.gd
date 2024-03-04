@@ -17,7 +17,7 @@ func _process(delta):
 		break_timer += delta
 	else:
 		break_timer = 0
-	if break_timer > 1:
+	if break_timer > 0.3:
 		die()
 
 func die():

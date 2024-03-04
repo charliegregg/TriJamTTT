@@ -3,6 +3,7 @@ extends Node2D
 @export var cycle: float = 4.0
 @export var start: float = 1.0
 @export var end: float = 3.0
+@export var spin: float = 0.0
 
 
 var timer = 0
@@ -23,6 +24,7 @@ func _physics_process(delta):
 	else:
 		if enabled:
 			start_disable()
+	rotation += 2 * PI * delta * spin
 
 func enable():
 	$PulseSound.play()
