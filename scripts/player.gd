@@ -68,7 +68,7 @@ func _physics_process(delta):
 	velocity += inp * speed * delta / 2
 	velocity.x *= exp(-friction * delta)
 	
-	if position.y > 2000:
+	if position.y > 2000 and alive:
 		die()
 	
 	
