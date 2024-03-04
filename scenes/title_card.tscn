@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://4kkhhna4s7ut"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_td7jj"]
+
+[node name="title_card" type="Label"]
+text = "There's too many"
+label_settings = SubResource("LabelSettings_td7jj")
