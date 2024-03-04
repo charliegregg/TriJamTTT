@@ -18,57 +18,57 @@ text = "There's too many lasers"
 [node name="flag" parent="." index="3"]
 next_level = ExtResource("2_e73bh")
 
-[node name="laser4" parent="." index="53" instance=ExtResource("3_c6fks")]
+[node name="laser9" parent="." index="53" instance=ExtResource("3_c6fks")]
 position = Vector2(1551, -812)
 rotation = 3.14159
 cycle = 9.0
 start = 0.0
 end = 3.0
 
-[node name="laser5" parent="." index="54" instance=ExtResource("3_c6fks")]
+[node name="laser10" parent="." index="54" instance=ExtResource("3_c6fks")]
 position = Vector2(1613, -812)
 rotation = 3.14159
 cycle = 9.0
 
-[node name="laser6" parent="." index="55" instance=ExtResource("3_c6fks")]
+[node name="laser11" parent="." index="55" instance=ExtResource("3_c6fks")]
 position = Vector2(1674, -812)
 rotation = 3.14159
 cycle = 9.0
 start = 6.0
 end = 9.0
 
-[node name="laser7" parent="." index="56" instance=ExtResource("3_c6fks")]
+[node name="laser12" parent="." index="56" instance=ExtResource("3_c6fks")]
 position = Vector2(2002, -795)
 rotation = 3.14159
 cycle = 9.0
 start = 0.0
 end = 3.0
 
-[node name="laser8" parent="." index="57" instance=ExtResource("3_c6fks")]
+[node name="laser13" parent="." index="57" instance=ExtResource("3_c6fks")]
 position = Vector2(2064, -795)
 rotation = 3.14159
 cycle = 9.0
 
-[node name="laser9" parent="." index="58" instance=ExtResource("3_c6fks")]
+[node name="laser14" parent="." index="58" instance=ExtResource("3_c6fks")]
 position = Vector2(2125, -795)
 rotation = 3.14159
 cycle = 9.0
 start = 6.0
 end = 9.0
 
-[node name="laser10" parent="." index="59" instance=ExtResource("3_c6fks")]
+[node name="laser15" parent="." index="59" instance=ExtResource("3_c6fks")]
 position = Vector2(4437, -1020)
 rotation = 3.14159
 cycle = 9.0
 start = 0.0
 end = 3.0
 
-[node name="laser11" parent="." index="60" instance=ExtResource("3_c6fks")]
+[node name="laser16" parent="." index="60" instance=ExtResource("3_c6fks")]
 position = Vector2(4499, -1020)
 rotation = 3.14159
 cycle = 9.0
 
-[node name="laser12" parent="." index="61" instance=ExtResource("3_c6fks")]
+[node name="laser17" parent="." index="61" instance=ExtResource("3_c6fks")]
 position = Vector2(4560, -1020)
 rotation = 3.14159
 cycle = 9.0
@@ -94,64 +94,64 @@ cycle = 9.0
 start = 6.0
 end = 9.0
 
-[node name="laser13" parent="." index="65" instance=ExtResource("3_c6fks")]
+[node name="laser18" parent="." index="65" instance=ExtResource("3_c6fks")]
 position = Vector2(6633, -1286)
 rotation = 3.14159
 cycle = 9.0
 start = 0.0
 end = 3.0
 
-[node name="laser14" parent="." index="66" instance=ExtResource("3_c6fks")]
+[node name="laser19" parent="." index="66" instance=ExtResource("3_c6fks")]
 position = Vector2(6695, -1286)
 rotation = 3.14159
 cycle = 9.0
 
-[node name="laser15" parent="." index="67" instance=ExtResource("3_c6fks")]
+[node name="laser20" parent="." index="67" instance=ExtResource("3_c6fks")]
 position = Vector2(6756, -1286)
 rotation = 3.14159
 cycle = 9.0
 start = 6.0
 end = 9.0
 
-[node name="laser16" parent="." index="68" instance=ExtResource("3_c6fks")]
+[node name="laser21" parent="." index="68" instance=ExtResource("3_c6fks")]
 position = Vector2(8584, -1666)
 rotation = 3.14159
 cycle = 9.0
 start = 0.0
 end = 3.0
 
-[node name="laser17" parent="." index="69" instance=ExtResource("3_c6fks")]
+[node name="laser25" parent="." index="69" instance=ExtResource("3_c6fks")]
 position = Vector2(8646, -1666)
 rotation = 3.14159
 cycle = 9.0
 
-[node name="laser18" parent="." index="70" instance=ExtResource("3_c6fks")]
+[node name="laser26" parent="." index="70" instance=ExtResource("3_c6fks")]
 position = Vector2(8707, -1666)
 rotation = 3.14159
 cycle = 9.0
 start = 6.0
 end = 9.0
 
-[node name="laser19" parent="." index="71" instance=ExtResource("3_c6fks")]
+[node name="laser27" parent="." index="71" instance=ExtResource("3_c6fks")]
 position = Vector2(10801, -1602)
 rotation = 3.14159
 cycle = 9.0
 start = 0.0
 end = 3.0
 
-[node name="laser20" parent="." index="72" instance=ExtResource("3_c6fks")]
+[node name="laser28" parent="." index="72" instance=ExtResource("3_c6fks")]
 position = Vector2(10863, -1602)
 rotation = 3.14159
 cycle = 9.0
 
-[node name="laser21" parent="." index="73" instance=ExtResource("3_c6fks")]
+[node name="laser29" parent="." index="73" instance=ExtResource("3_c6fks")]
 position = Vector2(10924, -1602)
 rotation = 3.14159
 cycle = 9.0
 start = 6.0
 end = 9.0
 
-[node name="laser25" parent="." index="74" instance=ExtResource("3_c6fks")]
+[node name="laser30" parent="." index="74" instance=ExtResource("3_c6fks")]
 position = Vector2(11034, -907)
 rotation = 3.14159
 cycle = 10.0
@@ -159,7 +159,7 @@ start = 1.0
 end = 3.0
 spin = 0.2
 
-[node name="laser26" parent="." index="75" instance=ExtResource("3_c6fks")]
+[node name="laser31" parent="." index="75" instance=ExtResource("3_c6fks")]
 position = Vector2(4381, 311)
 rotation = 3.14159
 cycle = 10.0

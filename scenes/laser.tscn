@@ -1,7 +1,7 @@
 [gd_scene load_steps=16 format=3 uid="uid://d6j64as3f14u"]
 
 [ext_resource type="Script" path="res://scripts/laser.gd" id="1_7wu1f"]
-[ext_resource type="Texture2D" uid="uid://cl1tidara4oel" path="res://icon.svg" id="1_uxs28"]
+[ext_resource type="Texture2D" uid="uid://cv8dklx8qj04f" path="res://resources/laseremitter.png" id="2_bb0mx"]
 [ext_resource type="AudioStream" uid="uid://bjk2ogqugoscs" path="res://SFX/Laser/Disintegrator A.wav" id="3_3phxs"]
 [ext_resource type="AudioStream" uid="uid://d4ig6c2be7w8y" path="res://SFX/Laser/Power Charge A.wav" id="3_bsh01"]
 [ext_resource type="AudioStream" uid="uid://cji22cgvqxq1e" path="res://SFX/Laser/Disintegrator B.wav" id="4_gwgx4"]
@@ -55,8 +55,9 @@ start = 3.0
 end = 6.0
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("1_uxs28")
+texture_filter = 1
+scale = Vector2(2, 2)
+texture = ExtResource("2_bb0mx")
 
 [node name="Beam" type="Node2D" parent="."]
 z_index = -2
