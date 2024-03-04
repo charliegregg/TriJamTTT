@@ -1,4 +1,4 @@
-[gd_scene load_steps=57 format=3 uid="uid://dugyht4vx4s4h"]
+[gd_scene load_steps=58 format=3 uid="uid://dugyht4vx4s4h"]
 
 [ext_resource type="PackedScene" uid="uid://dggrmokvyx76q" path="res://scenes/player.tscn" id="1_72awm"]
 [ext_resource type="Script" path="res://scripts/level.gd" id="1_l2yrs"]
@@ -15,7 +15,8 @@
 [ext_resource type="PackedScene" uid="uid://d1f31r6p2o64i" path="res://scenes/enemy.tscn" id="9_5yypo"]
 [ext_resource type="Script" path="res://addons/rmsmartshape/shapes/point_array.gd" id="9_7efqg"]
 [ext_resource type="PackedScene" uid="uid://txhwo0foi6vn" path="res://scenes/loading.tscn" id="11_25t6j"]
-[ext_resource type="PackedScene" uid="uid://bjlga6dm0o6im" path="res://scenes/break_platform.tscn" id="14_33j8w"]
+[ext_resource type="PackedScene" uid="uid://4kkhhna4s7ut" path="res://scenes/title_card.tscn" id="12_3eao2"]
+[ext_resource type="PackedScene" path="res://scenes/break_platform.tscn" id="14_33j8w"]
 [ext_resource type="PackedScene" uid="uid://cdi24c03fch2a" path="res://scenes/semiplatform.tscn" id="15_wmo4j"]
 [ext_resource type="PackedScene" uid="uid://cqyec3w3k7i01" path="res://scenes/coin.tscn" id="17_d41dy"]
 [ext_resource type="PackedScene" uid="uid://ckgee5fiwgkwi" path="res://scenes/big_platform.tscn" id="18_uvhm7"]
@@ -351,6 +352,14 @@ offset_right = 1900.0
 offset_bottom = 1060.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="title_card" parent="CamAnch/Cam/Control" instance=ExtResource("12_3eao2")]
+layout_mode = 1
+offset_left = -305.0
+offset_top = -509.0
+offset_right = 186.0
+offset_bottom = -455.0
+level_name = "lasers"
 
 [node name="flag" parent="." instance=ExtResource("6_vgl56")]
 position = Vector2(12984, -1016)
