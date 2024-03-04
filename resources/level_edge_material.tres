@@ -1,15 +1,16 @@
-[gd_resource type="Resource" script_class="SS2D_Material_Edge_Metadata" load_steps=7 format=3 uid="uid://dicidcvrnlmwl"]
+[gd_resource type="Resource" script_class="SS2D_Material_Edge_Metadata" load_steps=8 format=3 uid="uid://dicidcvrnlmwl"]
 
 [ext_resource type="Script" path="res://addons/rmsmartshape/materials/edge_material.gd" id="1_2mmvl"]
-[ext_resource type="Texture2D" uid="uid://cl1tidara4oel" path="res://icon.svg" id="2_kcvd8"]
+[ext_resource type="Texture2D" uid="uid://drws0vxbqp16o" path="res://resources/grass_top.png" id="2_3eieh"]
+[ext_resource type="Texture2D" uid="uid://k5mr0fkv3rrq" path="res://resources/grass_corner.png" id="3_kl781"]
 [ext_resource type="Script" path="res://addons/rmsmartshape/normal_range.gd" id="3_px2t8"]
 [ext_resource type="Script" path="res://addons/rmsmartshape/materials/edge_material_metadata.gd" id="4_3q6d0"]
 
 [sub_resource type="Resource" id="Resource_u5hbb"]
 script = ExtResource("1_2mmvl")
-textures = Array[Texture2D]([ExtResource("2_kcvd8")])
-textures_corner_outer = Array[Texture2D]([ExtResource("2_kcvd8")])
-textures_corner_inner = Array[Texture2D]([ExtResource("2_kcvd8")])
+textures = Array[Texture2D]([ExtResource("2_3eieh")])
+textures_corner_outer = Array[Texture2D]([ExtResource("3_kl781")])
+textures_corner_inner = Array[Texture2D]([])
 textures_taper_left = Array[Texture2D]([])
 textures_taper_right = Array[Texture2D]([])
 randomize_texture = false

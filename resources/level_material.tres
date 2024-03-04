@@ -1,13 +1,13 @@
 [gd_resource type="Resource" script_class="SS2D_Material_Shape" load_steps=4 format=3 uid="uid://dgm7r123xc308"]
 
 [ext_resource type="Resource" uid="uid://dicidcvrnlmwl" path="res://resources/level_edge_material.tres" id="1_87l0i"]
-[ext_resource type="Texture2D" uid="uid://cl1tidara4oel" path="res://icon.svg" id="2_38du4"]
+[ext_resource type="Texture2D" uid="uid://dwrb42j02h8wj" path="res://resources/dirt.png" id="2_4pw7b"]
 [ext_resource type="Script" path="res://addons/rmsmartshape/materials/shape_material.gd" id="3_h153n"]
 
 [resource]
 script = ExtResource("3_h153n")
 _edge_meta_materials = Array[Resource("res://addons/rmsmartshape/materials/edge_material_metadata.gd")]([ExtResource("1_87l0i")])
-fill_textures = Array[Texture2D]([ExtResource("2_38du4")])
+fill_textures = Array[Texture2D]([ExtResource("2_4pw7b")])
 fill_texture_z_index = -10
 fill_texture_show_behind_parent = false
 fill_texture_scale = 1.0
